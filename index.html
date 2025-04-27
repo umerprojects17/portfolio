@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umer Rehman - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+           font-family: 'Inter', sans-serif;
+       }
+       .contact-button {
+           background: linear-gradient(to right, #25d366, #128c7e);
+           color: white;
+           padding: 12px 24px;
+           border-radius: 25px;
+           display: inline-flex;
+           align-items: center;
+           gap: 8px;
+           font-weight: 500;
+           transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, opacity 0.3s ease;
+           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+           text-decoration: none;
+       }
+
+       .contact-button:hover {
+           transform: translateY(-2px) scale(1.05);
+           box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+           opacity: 0.9;
+       }
+
+       .contact-button i {
+           display: inline-flex;
+           align-items: center;
+           justify-content: center;
+           width: 24px;
+           height: 24px;
+       }
+
+
+       @media (max-width: 768px){
+           .contact-button{
+               padding: 10px 20px;
+           }
+       }
+        
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="bg-gray-800 sticky top-0 z-50 py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-semibold text-purple-400">Umer Rehman</a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#skills" class="hover:text-purple-300 transition duration-300">Skills</a></li>
+                    <li><a href="#experiences" class="hover:text-purple-300 transition duration-300">Experiences</a></li>
+                    <li><a href="#services" class="hover:text-purple-300 transition duration-300">Services</a></li>
+                    <li><a href="#about" class="hover:text-purple-300 transition duration-300">About Me</a></li>
+                    <li><a href="Contact.html" class="hover:text-purple-300 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle Navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 z-50">
+        <div class="bg-gray-800 w-80 h-full absolute right-0 p-6">
+            <div class="flex justify-end mb-4">
+                <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-4">
+                    <li><a href="#skills" class="block text-lg text-white hover:text-purple-300 transition duration-300">Skills</a></li>
+                    <li><a href="#experiences" class="block text-lg text-white hover:text-purple-300 transition duration-300">Experiences</a></li>
+                    <li><a href="#services" class="block text-lg text-white hover:text-purple-300 transition duration-300">Services</a></li>
+                    <li><a href="#about" class="block text-lg text-white hover:text-purple-300 transition duration-300">About Me</a></li>
+                     <li><a href="#contact" class="block text-lg text-white hover:text-purple-300 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <section id="hero" class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-center gap-8">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-bold text-purple-400 mb-4">Hi, I'm Umer Rehman</h1>
+                <p class="text-xl text-gray-300 mb-6">A Computer Science Student & Full-Stack Web Developer</p>
+                <a href="#projects" class="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-full transition duration-300">View My Work</a>
+            </div>
+            <div class="md:w-1/2">
+                <img src="img/umer-rehman.jpg" alt="Umer Rehman" class="rounded-full shadow-lg max-w-full h-auto" style="max-width: 300px;">
+            </div>
+        </section>
+
+        <section id="skills" class="bg-gray-800 py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-semibold text-center text-purple-400 mb-8">Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-white mb-4">Web Development</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>Tailwind CSS</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-white mb-4">Databases</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-white mb-4">Digital Marketing & SEO</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>SEO</li>
+                            <li>Social Media Marketing</li>
+                            <li>Content Marketing</li>
+                            <li>Google Analytics</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-white mb-4">Programming</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Python</li>
+                            <li>C++</li>
+                        </ul>
+                    </div>
+                     <div class="bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-white mb-4">Tools & Technologies</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Git</li>
+                            <li>Docker</li>
+                            <li>Linux</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiences" class="py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-semibold text-center text-purple-400 mb-8">Experiences & Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-white mb-4">Password Encryption & Decryption</h3>
+                        <p class="text-gray-300 mb-2">Python project for encrypting and decrypting passwords.</p>
+                        <p class="text-gray-400 text-sm">Technologies Used: Python, Cryptography Library</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-white mb-4">KBC Environment</h3>
+                        <p class="text-gray-300 mb-2">Built a KBC game environment using Python.</p>
+                        <p class="text-gray-400 text-sm">Technologies Used: Python</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-white mb-4">Snake Water Gun Game</h3>
+                        <p class="text-gray-300 mb-2">Implemented the classic Snake Water Gun game in Python.</p>
+                         <p class="text-gray-400 text-sm">Technologies Used: Python</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-white mb-4">Hafty Restaurant Website</h3>
+                        <p class="text-gray-300 mb-2">Full-stack website for a restaurant.</p>
+                        <p class="text-gray-400 text-sm">Technologies Used: HTML, CSS, JavaScript, PHP, MySQL</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-white mb-4">Rent a Car Database</h3>
+                        <p class="text-gray-300 mb-2">Designed and implemented a database for a car rental system.</p>
+                        <p class="text-gray-400 text-sm">Technologies Used: MySQL</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-white mb-4">2 Bit Security System</h3>
+                        <p class="text-gray-300 mb-2">Developed a 2-bit security system using hardware components.</p>
+                        <p class="text-gray-400 text-sm">Technologies Used:  Microcontrollers, Embedded Systems</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-white mb-4">Rice Growth Prediction System</h3>
+                        <p class="text-gray-300 mb-2">Developed a system to predict rice growth using Python.</p>
+                        <p class="text-gray-400 text-sm">Technologies Used: Python, Machine Learning</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="bg-gray-800 py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-semibold text-center text-purple-400 mb-8">Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-white mb-4">Web Development</h3>
+                        <p class="text-gray-300 mb-4">I offer full-stack web development services, creating responsive and user-friendly websites.</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Frontend Development</li>
+                            <li>Backend Development</li>
+                            <li>E-commerce Solutions</li>
+                            <li>Web Application Development</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-white mb-4">Digital Marketing</h3>
+                        <p class="text-gray-300 mb-4">I provide digital marketing services to help businesses grow their online presence.</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>SEO Optimization</li>
+                            <li>Social Media Marketing</li>
+                            <li>Content Strategy</li>
+                            <li>Email Marketing</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-white mb-4">SEO Consulting</h3>
+                        <p class="text-gray-300 mb-4">I offer SEO consulting services to improve website ranking and visibility.</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Website Audit</li>
+                            <li>Keyword Research</li>
+                            <li>On-Page Optimization</li>
+                            <li>Link Building Strategy</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <a href="https://wa.me/923416667208?text=Hello,%20I'm%20interested%20in%20your%20services." class="contact-button" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M380.9 97.1C350.6 65.9 311.3 48 268.3 48h-8.5c-43 0-82.5 17.9-112.8 49.1-30.3 31.2-47.2 73.4-47.2 118.2v40.4c0 44.7 16.8 87 47 118.3l.1.1c30.2 31.1 69.7 49 112.7 49h8.5c43 0 82.5-17.9 112.8-49.1 30.3-31.2 47.2-73.4 47.2-118.2V160c0-44.8-16.9-87.1-47.2-118.9zM224 416c-35.3 0-64-28.7-64-64s28.7-64 64-64 64 28.7 64 64-28.7 64-64 64zm243.2-161.8c-3.2 7.2-12.5 10.3-19.7 6.5-8.3-4.5-28.3-13.7-44.7-25.3-14.5-10.1-33.5-21.5-37.9-24.1-5.2-3.1-9.3-6.6-9.3-11.5 0-7.4 10.8-17.7 21.6-25.1 13.5-9.3 41.7-17.7 57.4-12.7 7.2 2.3 13.7 6.1 17.2 11.3 4.2 6.5 6.5 14.8 6.1 23.3-.4 8.2-4.1 15.6-10.5 20.5zM224 128c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96z"/></svg>
+                        </i>
+                        Contact me on WhatsApp
+                    </a>
+                     <a href="mailto:umerprojects175@gmail.com" class="contact-button ml-4"  rel="noopener noreferrer">
+                        <i class="fas fa-envelope">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M64 112c-8.8 0-16 7.2-16 16v224c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H64zM256 288c-6.6 0-12-5.4-12-12v-96c0-6.6 5.4-12 12-12h0c6.6 0 12 5.4 12 12v96c0 6.6-5.4 12-12 12h0zM48 80c-13.3 0-24 10.7-24 24V384c0 13.3 10.7 24 24 24h416c13.3 0 24-10.7 24-24V104c0-13.3-10.7-24-24-24H48zM299.1 163.5l115.6 67.2c4.5 2.6 7.6 7.1 7.6 12.2s-3.1 9.6-7.6 12.2L299.1 348.5c-4.5 2.6-10-1.3-10-7.7v-84.6c0-4.3 2.5-8.1 6.1-9.8l79.7-38.3L305.1 171c-3.6-1.7-6.1-5.5-6.1-9.5v-8.1c0-6.4 5.5-11.3 11.8-9.9zM162.9 163.5l-115.6 67.2c-4.5 2.6-7.6 7.1-7.6 12.2s3.1 9.6 7.6 12.2L162.9 348.5c4.5 2.6 10-1.3 10-7.7v-84.6c0-4.3-2.5-8.1-6.1-9.8l-79.7-38.3 73.7-42.5c3.6-1.7 6.1-5.5 6.1-9.5v-8.1c0-6.4-5.5-11.3-11.8-9.9z"/></svg>
+                        </i>
+                        Contact me on Email
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="img/umer-rehman-about.jpg" alt="Umer Rehman" class="rounded-lg shadow-lg max-w-full h-auto" style="max-width: 300px;">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-semibold text-purple-400 mb-4">About Me</h2>
+                    <p class="text-gray-300 mb-6">
+                        Hello! I'm Umer Rehman, a Computer Science student with a passion for creating innovative and impactful solutions. I specialize in full-stack web development, digital marketing, and SEO. I've worked on a variety of projects, from web applications to machine learning systems. I'm eager to leverage my skills and experience to help businesses succeed online.
+                    </p>
+                    <p class="text-gray-300 mb-6">
+                        I believe in continuous learning and staying up-to-date with the latest technologies. I'm always looking for new challenges and opportunities to grow as a developer and a professional.
+                    </p>
+                    <p class="text-gray-300">
+                        Let's connect and explore how I can help you achieve your goals!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            &copy; 2025 Umer Rehman. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenuBtn = document.getElementById("close-menu-btn");
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        const navLinks = document.querySelectorAll('.nav-links a');
+        const sections = document.querySelectorAll('section');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle("hidden");
+        }
+
+        hamburgerBtn.addEventListener("click", toggleMobileMenu);
+        closeMenuBtn.addEventListener("click", toggleMobileMenu);
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener("click", toggleMobileMenu);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && event.target !== hamburgerBtn) {
+                toggleMobileMenu();
+            }
+        });
+
+       function updateActiveNavLink() {
+            let currentSectionId = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

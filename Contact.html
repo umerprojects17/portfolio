@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Umer Rehman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .contact-form {
+            background-color: #0f172a; /* Dark background */
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .contact-form h2 {
+            color: #f5f5f5;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.75rem;
+            color: #f5f5f5;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: 2px solid #4c1d95; /* Darker purple border */
+            outline: none;
+            font-size: 1rem;
+            transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            background-color: #1e293b; /* Dark input fields */
+            color: #f8fafc;
+        }
+        .form-control:focus {
+            border-color: #8b5cf6; /* Lighter purple focus border */
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2); /* purple focus shadow */
+        }
+        textarea.form-control {
+            height: auto;
+            min-height: 120px;
+            resize: vertical;
+        }
+        .btn-primary {
+            background-color: #8b5cf6; /* Purple button */
+            color: #f5f5f5;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.1s ease;
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            max-width: 320px;
+        }
+        .btn-primary:hover {
+            background-color: #6d28d9; /* Lighter purple hover */
+            transform: translateY(-2px);
+        }
+        .btn-primary:disabled {
+            background-color: #a855f7;
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .contact-info {
+            background-color: #1e293b; /* Dark background */
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 6px 10px -2px rgba(0, 0, 0, 0.15), 0 3px 7px -3px rgba(0, 0, 0, 0.07);
+            margin-bottom: 2rem;
+        }
+
+        .contact-info h3 {
+            color: #f5f5f5;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+            text-align: center;
+        }
+
+        .contact-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-info li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .contact-info li i {
+            color: #8b5cf6;
+            font-size: 1.25rem;
+        }
+
+        .contact-info a {
+            color: #f5f5f5;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .contact-info a:hover {
+            color: #8b5cf6;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            color: #f5f5f5;
+            font-size: 1.5rem;
+            transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+            display: inline-block;
+        }
+
+        .social-icons a:hover {
+            color: #8b5cf6;
+            transform: scale(1.1);
+        }
+
+        .bg-gray-100 {
+            background-color: #111827; /* Darker background for body */
+        }
+        .text-gray-100{
+            color: #f8fafc;
+        }
+
+        #hero-section {
+            background-image: url('img/umer-rehman.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width: 768px) {
+            .contact-form {
+                padding: 1.5rem;
+            }
+            .contact-form h2 {
+                font-size: 2.25rem;
+            }
+            .form-group label {
+                font-size: 0.9rem;
+            }
+            .form-control {
+                font-size: 0.95rem;
+            }
+            .btn-primary {
+                font-size: 1rem;
+            }
+            .contact-info {
+                padding: 1.5rem;
+            }
+            .contact-info h3 {
+                font-size: 1.25rem;
+            }
+            .contact-info li {
+                font-size: 0.95rem;
+            }
+            .social-icons a {
+                font-size: 1.25rem;
+            }
+            .contact-info{
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .contact-form {
+                padding: 1rem;
+            }
+            .contact-form h2 {
+                font-size: 2rem;
+            }
+            .form-group label {
+                font-size: 0.85rem;
+            }
+            .form-control {
+                font-size: 0.9rem;
+            }
+             .btn-primary {
+                font-size: 0.95rem;
+            }
+            .contact-info {
+                padding: 1rem;
+            }
+            .contact-info h3 {
+                font-size: 1.1rem;
+            }
+             .contact-info li {
+                font-size: 0.9rem;
+            }
+            .social-icons a {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 py-10">
+    <section id="hero-section" class="relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-purple-900 opacity-80"></div>
+        <div class="container mx-auto px-4 py-16">
+            <h1 class="text-4xl font-semibold text-center text-white mb-8
+                       drop-shadow-lg"
+            >Contact Me</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+                <div class="contact-form">
+                    <h2>Send a Message</h2>
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                            <div class="invalid-feedback">Please enter your name.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter the subject" required>
+                            <div class="invalid-feedback">Please enter the subject.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" name="message" placeholder="Enter your message" required></textarea>
+                            <div class="invalid-feedback">Please enter your message.</div>
+                        </div>
+                        <button type="submit" class="btn-primary" id="submitBtn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Wah Cantt, Punjab, Pakistan</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+923416667208">+92 341 6667208</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:umerprojects175@gmail.com">umerprojects175@gmail.com</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="https://umerrehman.me" target="_blank" rel="noopener noreferrer">umerrehman.me</a></li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/your-facebook-profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="https://github.com/your-github-profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://stackoverflow.com/users/your-stackoverflow-profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-stack-overflow"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        (function () {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            const submitButton = document.getElementById('submitBtn');
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        } else {
+                            event.preventDefault(); // Prevent actual form submission for demo
+                            // Simulate sending data
+                            submitButton.disabled = true;
+                            submitButton.textContent = 'Sending...';
+                            setTimeout(() => {
+                                submitButton.disabled = false;
+                                submitButton.textContent = 'Send Message';
+                                alert('Your message has been sent successfully!');
+                                form.reset();
+                                form.classList.remove('was-validated');
+                            }, 2000);
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+</body>
+</html>
